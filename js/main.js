@@ -1,19 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-  // Logic..
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
 
 
 const badgeEl = document.querySelector('header .badges');
@@ -162,5 +146,3 @@ spyEls.forEach(function (spyEl) {
 
 /* 감시하려는 섹션에 scroll-spy라는 클래스를 하나씩 붙여줄것이고 붙어있는 각각의 섹션은 spyEls 변수에 모두다 할당을 할것이고 그 섹션들을 반복하며 처리를 하는데, 반복될때마다 spyEl안에 매개변수에 그 값이 들어있을것이고 그 spyEl는 곧 내가 감시하는 섹션이 되는 것이다.*/
 
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); //생성자 함수, 현재 날짜 정보를 가지고 있는 데이트 객체를 가지고 있다 2022
